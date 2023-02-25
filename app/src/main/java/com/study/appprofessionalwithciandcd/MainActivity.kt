@@ -3,6 +3,7 @@ package com.study.appprofessionalwithciandcd
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import com.study.appprofessionalwithciandcd.presentation.CalculatorScreen
 import com.study.appprofessionalwithciandcd.ui.theme.MaterialCalculatorTheme
 
 
@@ -11,10 +12,10 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             MaterialCalculatorTheme {
-                
-            }
+                CalculatorScreen()
             }
         }
     }
+}
 
 

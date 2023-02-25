@@ -7,8 +7,6 @@ import androidx.compose.material3.MaterialTheme
 import com.study.appprofessionalwithciandcd.domain.CalculatorAction
 import com.study.appprofessionalwithciandcd.domain.Operation
 
-class CalculatorUIActions {
-
 
     val calculatorActions = listOf(
         CalculatorUIAction(
@@ -119,4 +117,4 @@ class CalculatorUIActions {
             action = CalculatorAction.Calculate
         ),
     )
-}
+
