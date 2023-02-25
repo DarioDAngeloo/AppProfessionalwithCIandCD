@@ -31,8 +31,7 @@ class CalculatorScreenTest {
         composeRule.onNodeWithText("-").performClick()
         composeRule.onNodeWithText("5").performClick()
         composeRule.onNodeWithText("=").performClick()
-          //
-        //hola
+
         composeRule.onNodeWithText("2.0").assertIsDisplayed()
     }
 
