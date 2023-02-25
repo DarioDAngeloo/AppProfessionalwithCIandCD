@@ -42,4 +42,24 @@ class ExpressionEvaluatorTest {
 
         assertThat(evaluator.evaluate()).isEqualTo(4.5)
     }
+    @Test
+    fun `Simple equation with parentheses properly evaluated`() {
+        evaluator = ExpressionEvaluator(
+            listOf(
+                ExpressionPart.Number(4.0),
+                ExpressionPart.OperationSymbol(Operation.ADD),
+                ExpressionPart.Parentheses(ParenthesesType.Opening),
+                ExpressionPart.Number(5.0),
+                ExpressionPart.OperationSymbol(Operation.SUBTRACT),
+                ExpressionPart.Number(3.0),
+                ExpressionPart.Parentheses(ParenthesesType.Closing),
+                ExpressionPart.OperationSymbol(Operation.MULTIPLY),
+                ExpressionPart.Number(5.0),
+                ExpressionPart.OperationSymbol(Operation.DIVIDE),
+                ExpressionPart.Number(4.0),
+            )
+        )
+
+        assertThat(evaluator.evaluate()).isEqualTo(6.5)
+    }
 }
